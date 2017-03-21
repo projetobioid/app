@@ -1,0 +1,77 @@
+{
+  "categorization": {
+    "type": "APPLICATION",
+    "category": "Utilities"
+  },
+  "description": {
+    "texts": {
+      "title": "bioID",
+      "features": [
+        "Cadastros",
+        "Relatar Colheita",
+        "Relatar Destinação"
+      ],
+      "short-description": "Rastriabilidade de produtos biofortificados",
+      "full-description": "Aplicação para a rastriabilidade de produtos biofortificados",
+      "keywords": "bioid",
+      "recent-changes": "",
+      "privacy-policy": "",
+      "eula": ""
+    },
+    "images": {
+      "screenshots": [
+        "package-assets/sc1.png",
+        "package-assets/sc2.png",
+        "package-assets/sc3.png"
+      ],
+      "app-icon-small": "package-assets/a1.png",
+      "app-icon": "package-assets/a2.png",
+      "small-promo": "../../Pictures/img_loja/promo180_120.png",
+      "large-promo": "../../Pictures/img_loja/sc1024.jpg"
+    },
+    "videos": {
+      "video-url": ""
+    }
+  },
+  "packages": {
+    "apk-file": "",
+    "zip-xdk-compliant": false,
+    "zip-file": "",
+    "secondary-apk-file": ""
+  },
+  "support": {
+    "email": "inovacao@fundetec.org.br",
+    "website": "http://fundetec.org.br/"
+  },
+  "testing-instructions": "",
+  "description-pt_br": {
+    "texts": {
+      "title": "bioID",
+      "features": [
+        "Cadastros",
+        "Relatar Colheita",
+        "Relatar Destinação"
+      ],
+      "short-description": "Rastriabilidade de produtos biofortificados",
+      "full-description": "Aplicação para a rastriabilidade de produtos biofortificados",
+      "keywords": "bioid",
+      "recent-changes": "",
+      "privacy-policy": "",
+      "eula": ""
+    },
+    "images": {
+      "screenshots": [
+        "package-assets/sc1.png",
+        "package-assets/sc2.png",
+        "package-assets/sc3.png"
+      ],
+      "app-icon-small": "package-assets/a1.png",
+      "app-icon": "package-assets/a2.png",
+      "small-promo": "../../Pictures/img_loja/promo180_120.png",
+      "large-promo": "../../Pictures/img_loja/sc1024.jpg"
+    },
+    "videos": {
+      "video-url": ""
+    }
+  }
+}
