@@ -104,7 +104,7 @@ function mostrarCultivar(idClicado){
             window.spinnerplugin.hide();
             navigator.notification.alert(dadosRetorno.mensagem, function(){
                 iniciarGerenciador();
-            },"Erro!", "Sair");
+            },"Aviso!", "Sair");
 
         }
 
@@ -137,7 +137,7 @@ function mostarAgricultor(idClicado){
             window.spinnerplugin.hide();
             navigator.notification.alert(dadosRetorno.mensagem, function(){
                 iniciarGerenciador();
-            },"Erro!", "Sair");
+            },"Aviso!", "Sair");
 
         }
 
@@ -217,7 +217,7 @@ function listarPropriedades(){
     var envio = {
             metodo: "POR_USUARIO_E_IDUNIDADE",
             usuario: Sessao.usuario,
-            idunidade: Sessao.idunidade
+            idunidade: Sessao.unidade_idunidade
         };
 
     //chama a requisicao do servidor, o resultado é listado em uma tabela
@@ -412,7 +412,7 @@ function mostrarCultivarRecebido(idsafra){
             window.spinnerplugin.hide();
             navigator.notification.alert(dadosRetorno.mensagem, function(){
                 iniciarGerenciador();
-            },"Erro!", "Sair");
+            },"Aviso!", "Sair");
 
         }
 
@@ -474,7 +474,7 @@ function listarEstoqueGerenciador(){
     var Sessao = window.getSessao();
     var envio = {
             metodo: "TODOS",
-            idunidade: Sessao.idunidade
+            idunidade: Sessao.unidade_idunidade
         };
 
     //chama a requisicao do servidor, o resultado é listado em uma tabela
@@ -492,7 +492,7 @@ function listarEstoqueGerenciador(){
         }else{
             //retira o painel loading
             window.spinnerplugin.hide();
-            navigator.notification.alert(dadosRetorno.mensagem, function(){},"Erro!", "Sair");
+            navigator.notification.alert(dadosRetorno.mensagem, function(){},"Aviso!", "Sair");
 
         }
 
@@ -508,7 +508,7 @@ function listarEstoqueEntrevistador(){
     var Sessao = window.getSessao();
     var envio = {
             metodo: "TODOS",
-            idunidade: Sessao.idunidade
+            idunidade: Sessao.unidade_idunidade
         };
 
     //chama a requisicao do servidor, o resultado é listado em uma tabela
@@ -525,7 +525,7 @@ function listarEstoqueEntrevistador(){
         }else{
             //retira o painel loading
             window.spinnerplugin.hide();
-            navigator.notification.alert(dadosRetorno.mensagem, function(){},"Erro!", "Sair");
+            navigator.notification.alert(dadosRetorno.mensagem, function(){},"Aviso!", "Sair");
 
         }
 
@@ -542,7 +542,7 @@ function listarAgricultoresUnidade(lista){
         metodo: "TODOS_DA_UNIDADE",
         usuario: Sessao.usuario,
         sessao: Sessao.sessao,
-        idunidade: Sessao.idunidade
+        idunidade: Sessao.unidade_idunidade
     };
 
     //chama a requisicao do servidor, o resultado é listado em uma tabela
@@ -566,7 +566,7 @@ function listarAgricultoresUnidade(lista){
         }else{
             //retira o painel loading
             window.spinnerplugin.hide();
-            navigator.notification.alert(dadosRetorno.mensagem, function(){},"Erro!", "Sair");
+            navigator.notification.alert(dadosRetorno.mensagem, function(){},"Aviso!", "Sair");
 
         }
 
@@ -930,7 +930,7 @@ $(document).on("submit", "#formLogin", function(e){
 
 
                 }else{
-                    $("#alerta").empty().append('<a href="#" id="fecharAlert" class="close">&times;</a><strong>Erro!</strong> Usuário ou senha incorreta!').fadeIn();
+                    $("#alerta").empty().append('<a href="#" id="fecharAlert" class="close">&times;</a><strong>Aviso!</strong> Usuário ou senha incorreta!').fadeIn();
                 }
         });
         window.spinnerplugin.hide();
@@ -1054,7 +1054,7 @@ function listarEquipe(){
         metodo: "EQUIPE",
         usuario: Sessao.usuario,
         sessao: Sessao.sessao,
-        idunidade: Sessao.idunidade
+        idunidade: Sessao.unidade_idunidade
     };
     //chama a requisicao do servidor, o resultado é listado em uma tabela
     requisicao("usuario/listar", envio, function(dadosRetorno) {
@@ -1073,7 +1073,7 @@ function listarEquipe(){
             //retira o painel loading
             window.spinnerplugin.hide();
             $('#listaDeMembros').append('<a class="list-group-item allow-badge widget" data-uib="twitter%20bootstrap/list_item" data-ver="1"><h4 class="list-group-item-heading"><span class="glyphicon glyphicon-refresh"></span>&nbsp;&nbsp;&nbsp;Atualizar!</h4></a>');
-            navigator.notification.alert(dadosRetorno.mensagem, function(){},"Erro!", "Sair");
+            navigator.notification.alert(dadosRetorno.mensagem, function(){},"Aviso!", "Sair");
 
         }
 
@@ -1525,6 +1525,3 @@ $(document).on("click", "#buttonRelatarDestinacao", function(evt)
 })();
 
 
-
-/*
-<span class="badge fa fa-thumbs-o-up"><span class="badge fa fa-chevron-right"> </span> </span>*/
