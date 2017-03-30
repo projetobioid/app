@@ -116,7 +116,7 @@ function mostrarCultivar(idClicado){
 function mostarAgricultor(idClicado){
     window.spinnerplugin.show();
     var envio = {
-        metodo: "GET_POR_ID",
+        metodo: "BUSCA_POR_ID_AGRICULTOR",
         idpessoa: idClicado
     };
 
@@ -124,7 +124,6 @@ function mostarAgricultor(idClicado){
     requisicao("agricultor/buscar", envio, function(dadosRetorno) {
 //            $('#listaDeMembros').empty();
         if(dadosRetorno.sucesso){
-
 
             //chama a funcao que mostra a pagina amostragem
             abrirPageAmostragem('Agricultor', dadosRetorno.data.nome+' '+dadosRetorno.data.sobrenome+'<i class="fa fa-user button-icon-right" data-position="top"></i>', '<div class="col single-col" data-uib="layout/col" data-ver="0"><div class="widget-container content-area vertical-col"><div class="tarea widget d-margins" data-uib="media/text" data-ver="0" ><div class="widget-container left-receptacle"></div><div class="widget-container right-receptacle"></div><div class="text-container">             <p  class="backgroundBranco" >CPF: '+dadosRetorno.data.cpf+'</p><p class="backgroundCinza">RG: '+dadosRetorno.data.rg+'</p><p  class="backgroundBranco" >Apelido: '+dadosRetorno.data.apelido+'</p><p class="backgroundCinza">Data nascimento: '+dadosRetorno.data.datanascimento+'</p><p  class="backgroundBranco" >Sexo: '+dadosRetorno.data.sexo+'</p><p class="backgroundCinza">Telefone1: '+dadosRetorno.data.telefone1+'</p><p  class="backgroundBranco" >Telefone2: '+dadosRetorno.data.telefone2+'</p><p class="backgroundCinza">Email: '+dadosRetorno.data.email+'</p><p  class="backgroundBranco" >Estado civíl: '+dadosRetorno.data.estadocivil+'</p><p class="backgroundCinza">Escolaridade: '+dadosRetorno.data.escolaridade+'</p><p  class="backgroundBranco" >Qtd integrante(s) na família: '+dadosRetorno.data.qtdintegrantes+'</p><p class="backgroundCinza">Qtd crianças: '+dadosRetorno.data.qtdcriancas+'</p><p  class="backgroundBranco" >Qtd grávidas: '+dadosRetorno.data.qtdgravidas+'</p><hr>  <div class="text-container" id="MostrarPropriedadesAgricultor" value="'+dadosRetorno.data.idpessoa+'"><div class="panelPropriedades">Propriedades<i class="amarelo glyphicon glyphicon-chevron-up button-icon-right" data-position="top"></i></div></div><div id="propriedadesDoAgricultor" hidden=""></div>      </div></div><span class="uib_shim"></span></div></div>');
