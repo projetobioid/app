@@ -801,8 +801,8 @@ function listarAgricultoresUnidade(lista){
     {
 
         activate_page("#page_login");
-        $("#username").val("entrevistador");
-        $("#password").val("entrevistador");
+        $("#username").val("");
+        $("#password").val("");
         $("#formLogin").validator();
         $('#alerta').hide();
 //         $('#uib_w_7').fadeIn(100);
